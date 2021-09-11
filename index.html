@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Archive</title>
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1 class="m-5 text-center text-primary">Book Archive</h1>
+        </div>
+    </header>
+    <main>
+        <div class="input-group mb-3 w-50 mx-auto">
+            <!-- search field -->
+            <input id="book-search" type="text" class="form-control" placeholder="Search your book"
+                aria-label="Recipient's username" aria-describedby="button-addon2">
+            <!-- button -->
+            <div class="input-group-append">
+                <button onclick="loadBook()" class="btn btn-success" type="button" id="button-addon2">Search</button>
+            </div>
+        </div>
+
+        <!-- display total book number -->
+        <div id="number-container" class="text-center text-success d-none mb-5">
+            <h6><span id="total-book"> </span> books found.</h6>
+        </div>
+
+        <!-- display books list -->
+        <div id="display-book" class="row row-cols-1 row-cols-md-4 g-4">
+
+        </div>
+    </main>
+
+    <script src="js/book.js"></script>
+</body>
+
+</html>
